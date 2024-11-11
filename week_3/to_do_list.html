@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+
+        <a href="#" class="logo">To Do List</a>
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#about us">about</a>
+            <a href="#contact us">contact</a> 
+        </nav>
+    </header>
+
+  <div>
+    <img src="https://images.unsplash.com/photo-1644329771909-b651e30c41da?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dG8lMjBkbyUyMGxpc3R8ZW58MHx8MHx8fDA%3D" alt="to_do_list"
+         height="100%" width="100%">
+    <div class="card" style="width: 18rem;">
+        <img src="https://imageio.forbes.com/specials-images/dam/imageserve/1092571024/960x0.jpg?format=jpg&width=1440" class="card-img-top" alt="...">
+        <div class="card-body">
+            <button class="button" id="btn" onclick="openForm()">Add Your Task</button>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem; margin-left: 20px;">
+        <h3>Your Tasks:</h3>
+        <ul id="tasks"></ul>
+    </div>
+</div>
+
+  <div id="taskForm" class="form-popup">
+      <form class="form-container" onsubmit="addTask(event)">
+          <h2>Add Task</h2>
+
+          <label for="task">Task:</label>
+          <input type="text" id="task" required>
+          <br><br>
+          <button type="submit" class="btn">Add Task</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+  </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
